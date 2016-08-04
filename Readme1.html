@@ -1,0 +1,44 @@
+<hr>
+
+<p>title: &quot;Habits&quot;<br>
+author: John Doe<br>
+date: March 22, 2005</p>
+
+<h2>output: revealjs::revealjs_presentation</h2>
+
+<h1>Reveal MarkDown Preview</h1>
+
+<!--   ....    -->
+
+<!--    
+$f(x)$
+-->
+
+<pre lang="plantuml"><code>@startuml
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: another authentication NEW
+@endum
+</code></pre>
+
+<pre lang="plantuml"><code>@startuml
+
+    Class Stage
+    Class Timeout {
+        +constructor:function(cfg)
+        +timeout:function(ctx)
+        +overdue:function(ctx)
+        +stage: Stage
+    }
+     Stage &lt;|-- Timeout
+
+@enduml
+</code></pre>
+
+<hr>
+
+<p><img src="http://g.gravizo.com/g?%0A%20%20digraph%20G%20%7B%0A%20%20%20%20aize%20=%224,4%22;%0A%20%20%20%20main%20%5Bshape=box%5D;%0A%20%20%20%20main%20-%3E%20parse%20%5Bweight=8%5D;%0A%20%20%20%20parse%20-%3E%20execute;%0A%20%20%20%20main%20-%3E%20init%20%5Bstyle=dotted%5D;%0A%20%20%20%20main%20-%3E%20cleanup;%0A%20%20%20%20execute%20-%3E%20%7B%20make_string;%20printf%7D;%0A%20%20%20%20init%20-%3E%20make_string;%0A%20%20%20%20edge%20%5Bcolor=red%5D;%0A%20%20%20%20main%20-%3E%20printf%20%5Bstyle=bold,label=%22100%20times%22%5D;%0A%20%20%20%20make_string%20%5Blabel=%22make%20a%20string%22%5D;%0A%20%20%20%20node%20%5Bshape=box,style=filled,color=%22.7%20.3%201.0%22%5D;%0A%20%20%20%20execute%20-%3E%20compare;%0A%20%20%7D" alt="Alt text"></p>
+
+<p><img src="http://g.gravizo.com/g?%0A@startuml;%0Aactor%20User;%0Aparticipant%20%22First%20Class%22%20as%20A;%0Aparticipant%20%22Second%20Class%22%20as%20B;%0Aparticipant%20%22Last%20Class%22%20as%20C;%0AUser%20-%3E%20A:%20DoWork;%0Aactivate%20A;%0AA%20-%3E%20B:%20Create%20Request;%0Aactivate%20B;%0AB%20-%3E%20C:%20DoWork;%0Aactivate%20C;%0AC%20--%3E%20B:%20WorkDone;%0Adestroy%20C;%0AB%20--%3E%20A:%20Request%20Created;%0Adeactivate%20B;%0AA%20--%3E%20User:%20Done;%0Adeactivate%20A;%0A@enduml" alt="Alt text"></p>
